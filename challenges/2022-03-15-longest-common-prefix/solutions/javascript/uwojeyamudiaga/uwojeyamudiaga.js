@@ -5,6 +5,7 @@
 
 function longestCommonPrefix(strings) {
     //Type your solution here
+    if (!strings.length || !Array.isArray(strings)) return "";
   }
   
   module.exports = { longestCommonPrefix };
