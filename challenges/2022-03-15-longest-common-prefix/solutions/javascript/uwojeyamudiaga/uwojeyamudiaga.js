@@ -10,8 +10,19 @@ function longestCommonPrefix(strings) {
     let pointer = 0, counter = 1, length = strings.length, result = "";
     let firstString = strings[pointer];
 
-   
-
+    // [flow, flower, flo]
+    while ( true ) {
+      let currentLetter = firstString[pointer];
+      let otherLetter = strings[counter++][pointer];
+      if (currentLetter === otherLetter) {
+        if (counter === length) {
+          result += currentLetter;
+          pointer++;
+        }
+      } else {
+        return result;
+      }
+    }
   }
   
   module.exports = { longestCommonPrefix };
