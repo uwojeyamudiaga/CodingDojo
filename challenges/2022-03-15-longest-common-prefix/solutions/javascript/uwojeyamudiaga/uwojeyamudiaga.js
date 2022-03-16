@@ -12,6 +12,10 @@ function longestCommonPrefix(strings) {
 
     // [flow, flower, flo]
     while ( true ) {
+      if (counter === length) {
+        counter = 1;
+      }
+
       let currentLetter = firstString[pointer];
       let otherLetter = strings[counter++][pointer];
       if (currentLetter === otherLetter) {
